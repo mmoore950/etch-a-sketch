@@ -1,0 +1,30 @@
+.gridSquare, 
+.container, body {
+    display: flex;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+
+}
+
+.container {
+    flex-wrap: wrap;
+    height: 93vh;
+    width: 93vw;
+    margin-top: 40px;
+
+}
+
+.gridSquare {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: calc(100% / 16);
+    height: calc(100% / 16);
+}
+
+button {
+    display: flex;
+}
