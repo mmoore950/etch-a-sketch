@@ -11,8 +11,11 @@ function createGrid(size) {
     gridSquare.classList.add('gridSquare')
     gridSquare.style.width = `${containerWidth / size}px`
     gridSquare.style.height = `${containerHeight / size}px`
+    gridSquare.hoverCount = 0
     gridSquare.addEventListener("mouseover", () => {
-        gridSquare.style.backgroundColor = "black"
+        gridSquare.hoverCount ++
+        const opacity = Math.min((gridSquare.hoverCount / 10), 1)
+        gridSquare.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`
     })
     container.appendChild(gridSquare)
     }
