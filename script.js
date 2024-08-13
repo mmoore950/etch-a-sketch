@@ -26,7 +26,7 @@ button.addEventListener("click", () => {
 
     if (isNaN(inputNumber)){
         alert(`You entered: ${userInput}, which isn't a number.`)
-    } else if (inputNumber > 100 || inputNumber < 1){
+    } else if (inputNumber > 100 || inputNumber < 1 || !Number.isInteger(inputNumber)){
         alert(`You entered ${inputNumber}, which isn't a valid grid size.`)
     } else {
         size = inputNumber
